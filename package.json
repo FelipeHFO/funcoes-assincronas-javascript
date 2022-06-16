@@ -1,0 +1,15 @@
+{
+  "name": "funcoes-assincronas-javascript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "async",
+    "promise"
+  ],
+  "author": "",
+  "license": "ISC"
+}
