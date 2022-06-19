@@ -9,8 +9,8 @@ function obterUsuario(callback){
     setTimeout(function () {
         return callback(null, {
             id: 1,
-            name: 'Felipe',
-            lastName: 'Oliveira'
+            nome: 'Felipe',
+            sobrenome: 'Oliveira'
         })
     }, 1000);
 }

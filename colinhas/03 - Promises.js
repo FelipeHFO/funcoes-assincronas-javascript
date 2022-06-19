@@ -36,7 +36,6 @@ function obterVendaDoUsuario(idUsuario){
     })
 }
 
-
 obterUsuario()
     .then(function (usuario) {
         return obterVendaDoUsuario(usuario.id)

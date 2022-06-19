@@ -47,15 +47,22 @@ function obterSaldoDoUsuario(idUsuario){
 }
 
 async function main(){
-    const usuario = await obterUsuario();
-    const [venda, saldo] = await Promise.all([
-        await obterVendaDoUsuario(usuario.id),
-        await obterSaldoDoUsuario(usuario.id)
-    ])
+    try{
+        console.time('Time');
+        const usuario = await obterUsuario();
+        const [venda, saldo] = await Promise.all([
+            obterVendaDoUsuario(usuario.id),
+            obterSaldoDoUsuario(usuario.id),
+        ])
 
-    console.log(usuario);
-    console.log(venda);
-    console.log(saldo);
+        console.log(usuario);
+        console.log(venda);
+        console.log(saldo);
+        console.timeEnd('Time');
+    }
+    catch(error) {
+        console.error('Deu ruim', error);
+    }
 }
 
 main();

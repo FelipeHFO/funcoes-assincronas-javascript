@@ -8,8 +8,8 @@ function obterUsuario(){
     setTimeout(function () {
         return {
             id: 1,
-            name: 'Felipe',
-            lastName: 'Oliveira'
+            nome: 'Felipe',
+            sobrenome: 'Oliveira'
         }
     }, 1000);
 }
