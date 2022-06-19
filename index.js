@@ -32,12 +32,30 @@ function obterVendaDoUsuario(idUsuario){
     })
 }
 
+function obterSaldoDoUsuario(idUsuario){
+    return new Promise(function resolvePromise(resolve, reject){
+        setTimeout(() => {
+            return resolve({
+                id: 1652746,
+                conta: 033163216,
+                digito: 5,
+                agencia: 0001,
+                saldo: 'R$ -5000,00'
+            })
+        }, 2000);
+    })
+}
+
 async function main(){
     const usuario = await obterUsuario();
-    const venda = await obterVendaDoUsuario(usuario.id);
+    const [venda, saldo] = await Promise.all([
+        await obterVendaDoUsuario(usuario.id),
+        await obterSaldoDoUsuario(usuario.id)
+    ])
 
     console.log(usuario);
     console.log(venda);
+    console.log(saldo);
 }
 
 main();

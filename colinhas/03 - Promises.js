@@ -36,6 +36,7 @@ function obterVendaDoUsuario(idUsuario){
     })
 }
 
+
 obterUsuario()
     .then(function (usuario) {
         return obterVendaDoUsuario(usuario.id)
@@ -48,6 +49,7 @@ obterUsuario()
     })
     .then((resultdo)  => console.log('Resultado', resultdo))
     .catch((error) => console.error('Deu ruim', error))
+
 
 /*
 Execute assim e terá o resultado do Usuário
