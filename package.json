@@ -1,15 +1,16 @@
 {
   "name": "funcoes-assincronas-javascript",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Um projeto para mostrar diferentes formas de trabalhar com funções assíncronas.",
   "scripts": {
     "start": "node index.js"
   },
   "keywords": [
     "async",
-    "promise"
+    "await",
+    "promise",
+    "callback"
   ],
-  "author": "",
+  "author": "Felipe Oliveira",
   "license": "ISC"
 }
